@@ -2,7 +2,12 @@ import React, { useState, useEffect } from "react";
 
 const Logs = () => {
 	const [logs, setLogs] = useState([]);
-	const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
+  
+  useEffect(() => {
+    getLogs();
+    // eslint-disable-next-line
+  }, [])
 
 	const getLogs = async () => {
 		setLoading(true);
@@ -13,7 +18,12 @@ const Logs = () => {
 		setLoading(false);
 	};
 
-	return <div />;
-};
+	if (loading) {
+		return <h4>Loading...</h4>;
+	}
+
+	return (
+
+  );
 
 export default Logs;
