@@ -13,6 +13,9 @@ const AddLogModal = () => {
 			});
 		} else {
 			console.log(message, tech, attention);
+			setMessage("");
+			setTech("");
+			setAttention(false);
 		}
 	};
 
