@@ -5,7 +5,26 @@ const AddLogModal = () => {
 	const [attention, setAttention] = useState(false);
 	const [tech, setTech] = useState("");
 
-	return <div id="add-log-modal" className="modal" style={modalStyle} />;
+	return (
+		<div id="add-log-modal" className="modal" style={modalStyle}>
+			<div className="modal-content">
+				<h4>Enter System Log</h4>
+				<div className="row">
+					<div className="input-field">
+						<input
+							type="text"
+							name="message"
+							value={message}
+							onChange={e => setMessage(e.target.value)}
+						/>
+						<label htmlFor="message" className="active">
+							Log Message
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
 };
 
 const modalStyle = {
