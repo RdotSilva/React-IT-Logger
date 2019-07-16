@@ -5,7 +5,12 @@ const AddLogModal = () => {
 	const [attention, setAttention] = useState(false);
 	const [tech, setTech] = useState("");
 
-	return <div />;
+	return <div id="add-log-modal" className="modal" style={modalStyle} />;
+};
+
+const modalStyle = {
+	width: "75%",
+	height: "75%"
 };
 
 export default AddLogModal;
