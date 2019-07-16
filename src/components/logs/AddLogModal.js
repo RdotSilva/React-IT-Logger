@@ -39,6 +39,20 @@ const AddLogModal = () => {
 						</select>
 					</div>
 				</div>
+				<div className="row">
+					<div className="input-field">
+						<label>
+							<input
+								type="checkbox"
+								className="filled-in"
+								checked={attention}
+								value={attention}
+								onChange={e => setAttention(!attention)}
+							/>
+							<span>Needs Attention</span>
+						</label>
+					</div>
+				</div>
 			</div>
 		</div>
 	);
