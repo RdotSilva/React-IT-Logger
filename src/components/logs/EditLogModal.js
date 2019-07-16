@@ -7,6 +7,19 @@ const EditLogModal = () => {
 	const [tech, setTech] = useState("");
 };
 
+const onSubmit = () => {
+	if (message === "" || tech === "") {
+		M.toast({
+			html: "Please enter a message and tech"
+		});
+	} else {
+		console.log(message, tech, attention);
+		setMessage("");
+		setTech("");
+		setAttention(false);
+	}
+};
+
 return (
 	<div id="edit-log-modal" className="modal" style={modalStyle}>
 		<div className="modal-content">
