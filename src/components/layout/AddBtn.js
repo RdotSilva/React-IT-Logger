@@ -24,7 +24,6 @@ const AddBtn = () => {
 					</a>
 				</li>
 			</ul>
-			/>
 		</div>
 	);
 };
