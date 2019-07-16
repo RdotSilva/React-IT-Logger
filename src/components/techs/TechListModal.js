@@ -19,7 +19,9 @@ const TechListModal = () => {
 	};
 
 	
-
+  if (loading) {
+		return <h4>Loading...</h4>;
+	}
 	
 	return (
 		
