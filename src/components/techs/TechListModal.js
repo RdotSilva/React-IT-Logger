@@ -18,10 +18,6 @@ const TechListModal = () => {
 		setLoading(false);
 	};
 
-	if (loading) {
-		return <h4>Loading...</h4>;
-	}
-
 	return (
 		<div id="tech-list-modal" className="modal">
 			<div className="modal-content">
