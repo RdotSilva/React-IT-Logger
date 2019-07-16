@@ -43,10 +43,11 @@ const AddTechModal = () => {
 							onChange={e => setLastName(e.target.value)}
 						/>
 						<label htmlFor="lastName" className="active">
-							First Name
+							Last Name
 						</label>
 					</div>
 				</div>
+			</div>
 			<div className="modal-footer">
 				<a
 					href="#!"
