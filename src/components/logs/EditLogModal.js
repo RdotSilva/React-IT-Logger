@@ -91,6 +91,10 @@ const modalStyle = {
 	height: "75%"
 };
 
+const mapStateToProps = state => ({
+	current: state.log.current
+});
+
 export default connect(
 	mapStateToProps,
 	{ updateLog }
