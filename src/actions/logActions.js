@@ -91,6 +91,31 @@ export const deleteLog = id => async dispatch => {
 	}
 };
 
+// Update log on server
+export const updateLog = log => async dispatch => {
+	try {
+		setLoading();
+
+		await fetch(`/logs/${id}`, {
+			method: "PUT",
+			body: JSON.stringify(log),
+			headers: {
+				"Content-Type": "application/json"
+			}
+		});
+
+		dispatch({
+			type: UPDATE_LOG,
+			payload: data
+		});
+	} catch (err) {
+		dispatch({
+			type: LOGS_ERROR,
+			payload: err.response
+		});
+	}
+};
+
 // Set current log
 export const setCurrent = log => {
 	return {
