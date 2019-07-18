@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { connect } from "react-redux";
 import LogItem from "../logs/LogItem";
 import Preloader from "../layout/Preloader";
 
-const Logs = () => {
+const Logs = ({ log: { logs, loading } }) => {
 	const [logs, setLogs] = useState([]);
 	const [loading, setLoading] = useState(false);
 
@@ -38,4 +39,8 @@ const Logs = () => {
 	);
 };
 
-export default Logs;
+const mapStateToProps = state => ({
+	log: state.log
+});
+
+export default connect(mapStateToProps)(Logs);
