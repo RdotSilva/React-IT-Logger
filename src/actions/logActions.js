@@ -4,7 +4,9 @@ import {
 	LOGS_ERROR,
 	ADD_LOG,
 	DELETE_LOG,
-	SET_CURRENT
+	SET_CURRENT,
+	CLEAR_CURRENT,
+	UPDATE_LOG
 } from "./types";
 
 // Fetch logs from server
@@ -94,6 +96,13 @@ export const setCurrent = log => {
 	return {
 		type: SET_CURRENT,
 		payload: log
+	};
+};
+
+// Set current log
+export const clearCurrent = () => {
+	return {
+		type: CLEAR_CURRENT
 	};
 };
 
