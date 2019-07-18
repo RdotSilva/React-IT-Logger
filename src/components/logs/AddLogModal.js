@@ -1,7 +1,10 @@
 import React, { useState } from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { addLog } from "../../actions/logActions";
 import M from "materialize-css/dist/js/materialize.min.js";
 
-const AddLogModal = () => {
+const AddLogModal = ({ addLog }) => {
 	const [message, setMessage] = useState("");
 	const [attention, setAttention] = useState(false);
 	const [tech, setTech] = useState("");
@@ -88,4 +91,7 @@ const modalStyle = {
 	height: "75%"
 };
 
-export default AddLogModal;
+export default connect(
+	null,
+	{ addLog }
+)(AddLogModal);
