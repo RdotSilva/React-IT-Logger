@@ -1,8 +1,10 @@
 import React from "react";
+import { connect } from "react-redux";
 import Moment from "react-moment";
 import PropTypes from "prop-types";
+import { deleteLog } from "../../actions/logActions";
 
-const LogItem = ({ log }) => {
+const LogItem = ({ log, deleteLog }) => {
 	return (
 		<li className="collection-item">
 			<div>
@@ -29,7 +31,11 @@ const LogItem = ({ log }) => {
 };
 
 LogItem.propTypes = {
-	log: PropTypes.object.isRequired
+	log: PropTypes.object.isRequired,
+	deleteLog: PropTypes.func.isRequired
 };
 
-export default LogItem;
+export default connect(
+	null,
+	{ deleteLog }
+)(LogItem);
