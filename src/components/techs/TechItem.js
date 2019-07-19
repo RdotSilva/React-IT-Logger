@@ -17,7 +17,8 @@ const TechItem = ({ tech, deleteTech }) => {
 };
 
 TechItem.propTypes = {
-	techs: PropTypes.object.isRequired
+	techs: PropTypes.object.isRequired,
+	deleteTech: PropTypes.func.isRequired
 };
 
 export default connect(
