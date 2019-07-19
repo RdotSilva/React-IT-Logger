@@ -5,15 +5,18 @@ import { deleteTech } from "../../actions/techActions";
 import M from "materialize-css/dist/js/materialize.min.js";
 
 const TechItem = ({ tech: { firstName, lastName, id }, deleteTech }) => {
+	const onDelete = () => {
+		deleteTech(id);
+		M.toast({
+			html: `${firstName} ${lastName} was deleted from techs`
+		});
+	};
+
 	return (
 		<li className="collection-item">
 			<div>
 				{firstName} {lastName}
-				<a
-					href="#!"
-					className="secondary-content"
-					onClick={() => deleteTech(id)}
-				>
+				<a href="#!" className="secondary-content" onClick={onDelete}>
 					<i className="material-icons grey-text">delete</i>
 				</a>
 			</div>
