@@ -9,6 +9,10 @@ const TechSelectOptions = ({ getTechs, tech: { techs, loading } }) => {
 
 TechSelectOptions.propTypes = {};
 
+const mapStateToProps = state => ({
+	tech: state.tech
+});
+
 export default connect(
 	mapStateToProps,
 	{ getTechs }
