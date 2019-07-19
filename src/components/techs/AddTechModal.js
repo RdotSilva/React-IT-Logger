@@ -14,7 +14,13 @@ const AddTechModal = ({ addTech }) => {
 				html: "Please enter a the first and last name"
 			});
 		} else {
-			console.log(firstName, lastName);
+			addTech({
+				firstName,
+				lastName
+			});
+			M.toast({
+				html: `${firstName} ${lastName} was added as a tech`
+			});
 			setFirstName("");
 			setLastName("");
 		}
