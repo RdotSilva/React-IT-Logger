@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
 import TechItem from "./TechItem";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { getTechs } from "../../actions/techActions";
 
-const TechListModal = () => {
+const TechListModal = ({ getTechs }) => {
 	const [techs, setTechs] = useState([]);
 	const [loading, setLoading] = useState(false);
 
@@ -32,4 +35,7 @@ const TechListModal = () => {
 	);
 };
 
-export default TechListModal;
+export default connect(
+	mapStateToProps,
+	{ getTechs }
+)(TechListModal);
