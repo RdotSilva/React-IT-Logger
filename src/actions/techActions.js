@@ -9,3 +9,8 @@ import {
 // Get techs from server
 
 // Set loading to true
+export const setLoading = () => {
+	return {
+		type: SET_LOADING
+	};
+};
