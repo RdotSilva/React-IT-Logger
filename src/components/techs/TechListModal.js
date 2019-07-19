@@ -35,6 +35,10 @@ const TechListModal = ({ getTechs }) => {
 	);
 };
 
+const mapStateToProps = (state = {
+	tech: state.tech
+});
+
 export default connect(
 	mapStateToProps,
 	{ getTechs }
