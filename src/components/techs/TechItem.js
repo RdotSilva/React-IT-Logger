@@ -1,7 +1,9 @@
 import React from "react";
+import { connect } from "react-redux";
 import PropTypes from "prop-types";
+import { deleteTech } from "../../actions/techActions";
 
-const TechItem = ({ tech }) => {
+const TechItem = ({ tech, deleteTech }) => {
 	return (
 		<li className="collection-item">
 			<div>
@@ -18,4 +20,7 @@ TechItem.propTypes = {
 	techs: PropTypes.object.isRequired
 };
 
-export default TechItem;
+export default connect(
+	null,
+	{ deleteTech }
+)(TechItem);
